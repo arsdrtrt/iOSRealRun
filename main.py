@@ -52,9 +52,9 @@ async def main():
         logger.info(f"got route from {config.config.routeConfig}")
 
         try:
-            print(f"已开始模拟跑步，速度大约为 {config.config.v} m/s")
-            print("会无限循环，按 Ctrl+C 退出")
-            print("请勿直接关闭窗口，否则无法还原正常定位")
+            print(f"Started simulating running, speed approximately {config.config.v} m/s")
+            print("Will loop infinitely, press Ctrl+C to exit")
+            print("Please do not close the window directly, otherwise normal positioning cannot be restored")
             await run.run(address, port, loc, config.config.v)
         except KeyboardInterrupt:
             logger.debug("get KeyboardInterrupt (inner)")
